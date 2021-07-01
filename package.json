@@ -1,7 +1,7 @@
 {
-  "name": "get-fs-type",
+  "name": "get-drive-type",
   "version": "0.0.1",
-  "description": "get filesystem type with node",
+  "description": "get drive type with node",
   "main": "index.js",
   "scripts": {
     "test": "node test.js",
@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/pickuse2013/get-fs-type.git"
+    "url": "git+https://github.com/pickuse2013/get-drive-type.git"
   },
   "author": "pickuse",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/pickuse2013/get-fs-type/issues"
+    "url": "https://github.com/pickuse2013/get-drive-type/issues"
   },
-  "homepage": "https://github.com/pickuse2013/get-fs-type#readme",
+  "homepage": "https://github.com/pickuse2013/get-drive-type#readme",
   "dependencies": {
     "bindings": "^1.5.0",
     "node-addon-api": "^4.0.0"

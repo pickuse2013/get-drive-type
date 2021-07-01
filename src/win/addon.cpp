@@ -67,13 +67,6 @@ Napi::Value fsType(const Napi::CallbackInfo &info)
     return Napi::Number::New(env, uDriveType);
 }
 
-Napi::Value DriveType()
-{
-
-}
-
-
-
 Napi::Object Init(Napi::Env env, Napi::Object exports)
 {
     exports.Set(Napi::String::New(env, "fsType"), Napi::Function::New(env, fsType));
