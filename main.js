@@ -4,7 +4,7 @@ var opsys = process.platform;
 module.exports = (folderPath) => {
     // check is system is mac osx
     if (opsys == "darwin") {
-        let fileType = addon.pathType(folderPath);
+        let fileType = addon.fsType(folderPath);
         return fileType;
     }
 

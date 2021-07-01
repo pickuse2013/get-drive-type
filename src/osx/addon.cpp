@@ -3,7 +3,7 @@
 #include <sys/mount.h>
 #include <sys/param.h>
 
-Napi::Value PathType(const Napi::CallbackInfo &info)
+Napi::Value fsType(const Napi::CallbackInfo &info)
 {
     Napi::Env env = info.Env();
 
@@ -37,7 +37,7 @@ Napi::Value PathType(const Napi::CallbackInfo &info)
 
 Napi::Object Init(Napi::Env env, Napi::Object exports)
 {
-    exports.Set(Napi::String::New(env, "pathType"), Napi::Function::New(env, PathType));
+    exports.Set(Napi::String::New(env, "fsType"), Napi::Function::New(env, fsType));
     return exports;
 }
 
