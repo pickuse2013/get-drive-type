@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/pickuse2013/get-fs-type#readme",
   "dependencies": {
+    "bindings": "^1.5.0",
     "node-addon-api": "^4.0.0"
   }
 }

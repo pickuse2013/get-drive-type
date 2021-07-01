@@ -1,41 +1,36 @@
 var addon = require('bindings')('addon.node')
 var opsys = process.platform;
 
-module.exports = (folderPath) => {
-    // check is system is mac osx
-    if (opsys == "darwin") {
-        let fileType = addon.fsType(folderPath);
-        return fileType;
+module.exports = (path) => {
+    // check is system is osx or linux
+    if (opsys == "darwin" || opsys == "linux") {
+        // do nothing
     }
 
     // check is system is windows
     if (opsys == "win32" || opsys == "win64") {
+        if (path.startsWith("/")) {
+            return "unknow";
+        }
 
         // windows api only take like c:\
-        if (RegExp('^([a-zA-Z]):').test(folderPath)) {
-
+        if (RegExp('^([a-zA-Z]):').test(path)) {
             // take c:\ only
-            folderPath = folderPath.slice(0, 3)
+            path = path.slice(0, 3)
         }
-
-        // on windows they are only \\192.168.0.1 or Z:\ (mount) is network drive
-        // test url is start with \\??????
-        if (RegExp('^\\\\').test(folderPath)) {
-            return true;
-        }
-
-        // winapi network-drive is 4
-        if (addon.pathType(folderPath) == 4) {
-            return true;
-        }
-
-        return false;
     }
 
-    // check is system is linux
-    if (opsys == "linux") {
-        throw Error('not support linux yet')
+    // on windows they are only \\192.168.0.1 or Z:\ (mount) is network drive
+    // test url is start with \\??????
+    if (RegExp('^\\\\').test(path)) {
+        return "smb";
     }
 
-    return false;
+    let result = addon.fsType(path);
+
+    if (result) {
+        return result.toString().toLowerCase();
+    }
+
+    return "unknow";
 }

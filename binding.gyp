@@ -19,6 +19,11 @@
                     "src/osx/addon.cpp"
                 ]
             }],
+            ["OS=='linux'", {
+                "sources": [
+                    "src/linux/addon.cpp"
+                ]
+            }],
             ["OS=='win'", {
                 "conditions": [
                     ["target_arch=='x64'", {
