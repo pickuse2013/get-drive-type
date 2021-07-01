@@ -1,3 +1,3 @@
-var addon = require('./build/Release/addon')
-let test = addon.hello();
-console.log(test)
+var addon = require('./build/Release/addon');
+let fsType = addon.fsType("/Users/pickuse/Documents/GitHub/get-fs-type");
+console.log(fsType);
