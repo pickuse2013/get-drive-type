@@ -1,6 +1,6 @@
 {
   "name": "get-drive-type",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "get drive type with node",
   "main": "index.js",
   "scripts": {
