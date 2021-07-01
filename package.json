@@ -1,0 +1,22 @@
+{
+  "name": "get-fs-type",
+  "version": "0.0.1",
+  "description": "get filesystem type with node",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pickuse2013/get-fs-type.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pickuse2013/get-fs-type/issues"
+  },
+  "homepage": "https://github.com/pickuse2013/get-fs-type#readme",
+  "dependencies": {
+    "node-addon-api": "^4.0.0"
+  }
+}
